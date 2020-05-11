@@ -12,7 +12,7 @@
 
 
 
-<title>Francommits Blog</title>
+<title>Emulation Station configured for Windows 10 | Francommits Blog</title>
 
 
 
@@ -100,44 +100,22 @@
     }
 </script>
         <div class="main">
-            
-    <div class="container">
-    <div class="intro">
-        <div class="avatar">
-            <a href="/archives"><img src="/image/avatar.jpeg"></a>
-        </div>
-        <div class="nickname">Francommit</div>
-        <div class="description"><p>Automating my entire existence.</p>
-</div>
-        <div class="links">
-            
-                
-                    <a class="link-item" title="Resume" href="https://francommit.com/resume">
-                        
-                        
-                            <i class="iconfont icon-resume"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="LinkedIn" href="https://linkedin.com/in/chris-franco" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-linkedin"></i>
-                        
-                    </a>
-                
-                    <a class="link-item" title="Github" href="https://github.com/francommit" target="_blank" rel="noopener">
-                        
-                        
-                            <i class="iconfont icon-github"></i>
-                        
-                    </a>
-                
-            
-        </div>
-    </div>
-</div>
+            <div class="container">
+    <article class="post-wrap page">
+        
+        <h2 class="post-title">Emulation Station configured for Windows 10</h2>
+        
+        <section class="post-content">
+            <p>An auto-installer to set up Emulation Station correctly on a 64 bit version of Windows 10.</p>
+<p>Run a single Powershell script, throw your roms to the correct directory and enjoy!</p>
+<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p>Run the following one-liner in Powershell as admin;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force;[Net.ServicePointManager]::SecurityProtocol &#x3D; [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest &quot;https:&#x2F;&#x2F;github.com&#x2F;Francommit&#x2F;win10_emulation_station&#x2F;archive&#x2F;1.0.zip&quot; -OutFile &quot;emulationStation.zip&quot;;Expand-Archive .\emulationStation.zip;cd .\emulationStation; cd .\win*;.\prepare.ps1</span><br></pre></td></tr></table></figure>
 
+<p>Installation GIF:<br><img src="https://github.com/Francommit/github_gif_dump/blob/master/installation-instructions.gif?raw=true" alt="alt text"></p>
+
+        </section>
+    </article>
+</div>
 
         </div>
         <footer id="footer" class="footer">
