@@ -12,7 +12,7 @@
 
 
 
-<title>Emulation Station configured for Windows 10 | Francommits Blog</title>
+<title>Emulation Station configured for Windows 10/11 | Francommits Blog</title>
 
 
 
@@ -103,13 +103,13 @@
             <div class="container">
     <article class="post-wrap page">
         
-        <h2 class="post-title">Emulation Station configured for Windows 10</h2>
+        <h2 class="post-title">Emulation Station configured for Windows 10/11</h2>
         
         <section class="post-content">
-            <p>An auto-installer to set up Emulation Station correctly on a 64 bit version of Windows 10.</p>
+            <p>An auto-installer to set up Emulation Station correctly on a 64-bit version of Windows 10/11.</p>
 <p>Run a single Powershell script, throw your roms to the correct directory and enjoy!</p>
 <h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p>Run the following one-liner in Powershell as admin;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy Bypass -Scope Process -Force;[Net.ServicePointManager]::SecurityProtocol &#x3D; [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest &quot;https:&#x2F;&#x2F;github.com&#x2F;Francommit&#x2F;win10_emulation_station&#x2F;archive&#x2F;1.0.zip&quot; -OutFile &quot;emulationStation.zip&quot;;Expand-Archive .\emulationStation.zip;cd .\emulationStation; cd .\win*;.\prepare.ps1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (-Not (Test-Path C:\temp\es-setup)) &#123; mkdir C:\temp\es-setup &#125;; Set-Location C:\temp\es-setup\;Set-ExecutionPolicy Bypass -Scope Process -Force;[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;Invoke-WebRequest &quot;https://github.com/Francommit/win10_emulation_station/archive/1.2.5.zip&quot; -OutFile &quot;emulationStation.zip&quot;;Expand-Archive .\emulationStation.zip;cd .\emulationStation; cd .\win*;.\prepare.ps1</span><br></pre></td></tr></table></figure>
 
 <p>Installation GIF:<br><img src="https://github.com/Francommit/github_gif_dump/blob/master/installation-instructions.gif?raw=true" alt="alt text"></p>
 
